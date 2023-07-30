@@ -1,7 +1,5 @@
 # 角色受伤特效控制器
 
-[English](https://github.com/make-game-modules/damage-effect-controller/blob/main/README.en.md)
-
 这个项目提供了一个 Unity 脚本，用于管理角色受伤时的粒子特效。当角色受伤时，可以通过调用 "TriggerDamageEffect" 方法产生特效，当不需要产生特效时，可以调用 "StopDamageEffect" 方法停止特效。
 
 ## 如何安装
