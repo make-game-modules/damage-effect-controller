@@ -1,25 +1,31 @@
-# 玩家移动控制器
+# 角色受伤特效控制器
 
-这个项目提供了一个 Unity 脚本，可以实现玩家的基础移动控制。通过键盘的上下左右或者W、A、S、D键进行玩家角色的上下左右移动。
+[English](https://github.com/make-game-modules/damage-effect-controller/blob/main/README.en.md)
+
+这个项目提供了一个 Unity 脚本，用于管理角色受伤时的粒子特效。当角色受伤时，可以通过调用 "TriggerDamageEffect" 方法产生特效，当不需要产生特效时，可以调用 "StopDamageEffect" 方法停止特效。
 
 ## 如何安装
 
-在 Unity 项目中，任意位置使用 git clone 本仓库即可。
+在你的 Unity 项目中，使用 Git 在任意位置克隆本仓库即可。
 
 ## 如何使用
 
-将 `PlayerMovementController` 脚本挂载到玩家对象上，可在 Unity 编辑器的 Inspector 窗口中设置玩家的移动速度参数。
+1. 将 `DamageEffectController` 脚本挂载到角色对象上。
+2. 在需要的时候调用 `TriggerDamageEffect` 方法启动特效。
+3. 在不需要特效的时候调用 `StopDamageEffect` 方法来停止特效。
 
 ## 参数设置
 
-- `speed`: 这是一个公开的浮点型变量，用于控制玩家的移动速度，可以在 Unity 编辑器中进行调整。
+- `damageEffect`： 受伤特效的粒子系统组件引用。
 
 ## 运行原理
 
-- 获取水平方向和垂直方向的输入，创建一个二维向量，用来表示移动的方向和大小。
-- 使用上面创建的向量来移动玩家。乘以speed变量来控制移动的速度。
-- 乘以 `Time.deltaTime` 是上一帧的时间，可以保证在各种设备上，无论帧率如何，玩家的移动速度都是一致的。
+该脚本提供了两个公开方法 `TriggerDamageEffect` 和 `StopDamageEffect`，可以分别启动和停止受伤特效。
 
 ## 版权信息
 
 本项目采用 MIT 开源许可证，欢迎任何人对项目的改进和使用。
+
+## 其他
+
+如果你有任何关于这个项目的问题或建议，欢迎通过 issue 或者 pull request 提交给我们。
